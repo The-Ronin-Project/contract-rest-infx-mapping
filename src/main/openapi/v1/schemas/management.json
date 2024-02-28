@@ -1,0 +1,31 @@
+{
+  "openapi": "3.0.2",
+  "paths": {},
+  "info": {
+    "title": "",
+    "version": ""
+  },
+  "components": {
+    "schemas": {
+      "LoadConceptMapRequestBody": {
+        "title": "",
+        "description": "Load a concept map from object storage into the DB",
+        "type": "object",
+        "properties": {
+          "conceptMapUuid": {
+            "type": "string",
+            "default": ""
+          },
+          "versionId": {
+            "type": "string",
+            "default": ""
+          }
+        },
+        "required": [
+          "conceptMapUuid",
+          "versionId"
+        ]
+      }
+    }
+  }
+}

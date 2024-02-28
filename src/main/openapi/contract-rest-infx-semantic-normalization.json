@@ -1,0 +1,70 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Semantic Normalization Service - OpenAPI 3.0",
+    "description": "Semantic Normalization Service API specification",
+    "contact": {
+      "email": "INFX?@projectronin.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/api/v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "mapping",
+      "description": "Normalization mapping requests"
+    },
+    {
+      "name": "management",
+      "description": "Normalization data artifact management"
+    }
+  ],
+  "paths": {
+    "/management/load-concept-map/{conceptMapId}": {
+      "post": {
+        "summary": "Load the specified concept map artifact into the database.",
+        "description": "Mechanism for loading concept map data used for normalization",
+        "operationId": "",
+        "tags": [
+          "management"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "conceptMapId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Concept map unique identifier"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "v1/schemas/management.json#/components/schemas/LoadConceptMapRequestBody"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Not Authorized"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        }
+      }
+    }
+  }
+}

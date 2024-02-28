@@ -1,6 +1,5 @@
-# Template Project for REST Contracts
+# infx-semantic-normalization-api service REST Contracts
 
-This repo contains an example of a REST contract repository, to be used as a template repository in GitHub.
 
 # Tools
 
