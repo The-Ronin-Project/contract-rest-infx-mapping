@@ -28,7 +28,7 @@
       "post": {
         "summary": "Load the specified concept map artifact into the database.",
         "description": "Mechanism for loading concept map data used for normalization",
-        "operationId": "",
+        "operationId": "loadConceptMap",
         "tags": [
           "management"
         ],
